@@ -11,7 +11,6 @@ body {
     align-items: flex-start;
     padding: 0px;
     gap: 40px;
-
     position: absolute;
     width: 120px;
     height: 48px;
@@ -23,18 +22,15 @@ body {
     font-family: 'Inter', sans-serif;
     letter-spacing: 0em;
     text-align: left;
-
     position: absolute;
     width: 577px;
     height: 48px;
     left: 240px;
     top: 168px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    
     background-color: #E5E5E5;
     border: none;
 }
@@ -43,8 +39,87 @@ body {
     color: rgba(10, 56, 113, 1);
 }
 
+.container {
+    margin-top: 70%;
+}
+
+.rectagle {
+position: absolute;
+width: 250px; 
+height: 550px;
+left: 980px;
+top: 20px;
+box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+border-radius: 32px;
+background: rgba(255, 255, 255, 1);
+text-align: center;
+align-items: center;
+}
+
+.rectagle-mensaje{
+    background: red;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 800px;
+    top: 40px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    display: none;
+
+}
+
+.muñeco {
+    width: 75%; 
+    height:75%;
+    padding-bottom: 20px;
+}
+
+.mensaje{
+    width: 200px;
+    height:70px;
+}
+
+.frame {
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    left: 240px;
+    top: 450px;
+}
+
+.buttons {
+    position: absolute;
+    gap: 24px;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 480px;
+}
+
+.btn-encriptar{
+    gap: 8px;
+    width: 300px;
+    height: 47px;
+    background: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #D8DFE8;
+
+}
+
+.btn-desencriptar{
+    gap: 8px;
+    width: 300px;
+    height: 47px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+}
+
 footer {
-    margin-top:40%;
+    margin-top:45%;
     width:100%;
     text-align: center;
+    color: rgba(10, 56, 113, 1);
 }
