@@ -32,6 +32,8 @@ body {
     font-size: 25px;
     background-color: #E5E5E5;
     border: none;
+    outline: none;
+    color: rgba(10, 56, 113, 1);
 }
 
 ::placeholder{
@@ -40,9 +42,10 @@ body {
 
 .container {
     margin-top: 40%;
+    font-size:12px;
 }
 
-.rectagle {
+.rectangulo {
 position: absolute;
 width: 320px; 
 height: 550px;
@@ -53,19 +56,14 @@ border-radius: 32px;
 background: rgba(255, 255, 255, 1);
 text-align: center;
 align-items: center;
+font-size: 25px;
+line-height: 40px;
 }
 
-.rectagle-mensaje{
-    background: red;
-    position: absolute;
-    width: 320px;
-    height: 550px;
-    left: 900px;
-    top: 20px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-    display: none; 
 
+#msg {
+    margin: 20px;
+    text-align: left;
 }
 
 .muñeco {
@@ -87,7 +85,7 @@ align-items: center;
     top: 470px;
 }
 
-.btn-encriptar{
+.boton-encriptar{
     position: absolute;
     width: 300px;
     height: 47px;
@@ -99,7 +97,7 @@ align-items: center;
     top: 500px;
 }
 
-.btn-desencriptar{
+.boton-desencriptar{
     position: absolute;
     width: 300px;
     height: 47px;
@@ -111,7 +109,7 @@ align-items: center;
     top: 500px;
 }
 
-.btn-copiar {
+.boton-copiar {
     position: absolute;
     width: 300px;
     height: 47px;
@@ -121,6 +119,7 @@ align-items: center;
     color: #0A3871;
     left: 10px;
     top: 480px;
+    visibility: hidden;
 }
 
 footer {

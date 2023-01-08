@@ -4,36 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo2.jpg">
     <link rel="stylesheet" href="./reset.css">
-   <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Encriptador</title>
 </head>
 <body>
 
     <img  class="logo" src="./img/Logo.png" alt="Logo Alura">
 
-    <input type="text" class= "texto " placeholder="Ingrese el texto aqui"/>
+    <input type="text" class= "texto" id="texto"  placeholder="Ingrese el texto aqui"/>
 
-    <div class="rectagle">
-        <div class="container">
+    <div class="rectangulo">
+        <p id="msg" class="msg"></p> 
+        <div class="container" id="container">
             <img  class="muñeco" src="./img/Muñeco.png" alt="Persona Buscando algo">
             <img  class="mensaje" src="./img/Frame 5.png" alt="Ningun Mensaje fue encontrado">
         </div>
-    </div>
-
-    <div class="rectagle-mensaje">
-        <button class="btn-copiar">Copiar</button>
+        <button class="boton-copiar" id="boton-copiar">Copiar</button>
     </div>
 
     <img class="frame" src="./img/Frame 1.png" alt="Solo letras mayusculas y sin acentos ">
 
-    <button class="btn-encriptar">Encriptar</button>
+    <button class="boton-encriptar" id="boton-codificar">Encriptar</button>
         
-    <button class="btn-desencriptar">Desencriptar</button>
+    <button class="boton-desencriptar" id="boton-decodificar">Desencriptar</button>
 
     <footer>
         <p> &copy; copyright 2022-  Daniel Galetto </p>
     </footer>
+
+    <script>
+
+        function codificar() {
+            mensaje = document.getElementById("texto").value
+            mensajeCodificado = [];
+            for (let indice = 0; indice < mensaje.length; indice++) {
+                codificado = mensaje[indice].replace("e","enter").replace("i", "imes").replace("a","ai").replace("o","ober").replace("u", "ufat");
+                mensajeCodificado += codificado;
+            }
+            document.getElementById("msg").innerHTML = mensajeCodificado;
+            document.getElementById("texto").value = ""
+
+            document.getElementById("container").style.visibility = "hidden";
+            document.getElementById("boton-copiar").style.visibility = "visible";
+        }
+
+        var botonCodificar = document.querySelector("#boton-codificar")
+        botonCodificar.onclick = codificar
+
+        function decodificar(){
+            mensaje = document.getElementById("texto").value
+            mensajeDecodificado = mensaje.replace(/enter/g,"e").replace(/imes/g,"i").replace(/ai/g,"a").replace(/ober/g,"o").replace(/ufat/g,"u");
+            document.getElementById("msg").innerHTML = mensajeDecodificado;
+            document.getElementById("texto").value = ""
+
+            document.getElementById("container").style.visibility = "hidden";
+            document.getElementById("boton-copiar").style.visibility = "visible";
+        } 
+
+        var botonDecodificar = document.querySelector("#boton-decodificar")
+        botonDecodificar.onclick = decodificar
+
+        function copiar(){
+            alert("Disponible en version Premium")
+        }
+        var botonCopiar = document.querySelector("#boton-copiar")
+        botonCopiar .onclick = copiar
+
+    </script>
 
 </body>
 </html>
