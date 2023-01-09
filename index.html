@@ -16,7 +16,7 @@
     <textarea name="text" id="texto" cols="40" rows="12" placeholder="Ingrese el texto aqui"></textarea>
 
     <div class="rectangulo">
-        <p id="msg" class="msg"></p> 
+        <textarea name="msg" id="msg" cols="15" rows="10"></textarea>
         <div class="container" id="container">
             <img  class="muñeco" src="./img/Muñeco.png" alt="Persona Buscando algo">
             <img  class="mensaje" src="./img/Frame 5.png" alt="Ningun Mensaje fue encontrado">
@@ -46,7 +46,8 @@
             document.getElementById("msg").innerHTML = mensajeCodificado;
             document.getElementById("texto").value = ""
 
-            document.getElementById("container").style.visibility = "hidden";
+            document.getElementById("msg").style.display = "block";
+            document.getElementById("container").style.display = "none";
             document.getElementById("boton-copiar").style.visibility = "visible";
         }
 
@@ -59,7 +60,8 @@
             document.getElementById("msg").innerHTML = mensajeDecodificado;
             document.getElementById("texto").value = ""
 
-            document.getElementById("container").style.visibility = "hidden";
+            document.getElementById("msg").style.display = "block";
+            document.getElementById("container").style.display = "none";
             document.getElementById("boton-copiar").style.visibility = "visible";
         } 
 
@@ -67,10 +69,14 @@
         botonDecodificar.onclick = decodificar
 
         function copiar(){
-            alert("Disponible en version Premium")
+           // alert("Disponible en version Premium")
+           
+            var copiar = document.querySelector("#msg");
+	        copiar.select();
+	        document.execCommand("copy");
         }
         var botonCopiar = document.querySelector("#boton-copiar")
-        botonCopiar .onclick = copiar
+        botonCopiar.onclick = copiar
 
     </script>
 
