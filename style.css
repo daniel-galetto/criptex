@@ -126,7 +126,7 @@ line-height: 40px;
     color: #0A3871;
     left: 10px;
     top: 480px;
-    visibility: hidden;
+    display: none;
 }
 
 footer {
@@ -136,6 +136,9 @@ footer {
     text-align: center;
     color: rgba(10, 56, 113, 1);
 }
+
+
+
 
 @media screen and (max-width:480px) {
   
@@ -206,6 +209,19 @@ footer {
         font-size: 25px;
         line-height: 40px;
         }
+
+    #msg {
+        font-family: 'Inter', sans-serif;
+        font-size: 10px;
+        margin: 20px;
+        text-align: left;
+        color: #495057;
+        resize: none;
+        display:none;
+        width: 50px; 
+        height: 20px;
+        
+    }
     
     .frame {
         position: absolute;
@@ -228,11 +244,12 @@ footer {
     }
 
     boton-copiar {
-        visibility: hidden;
+        display: block;
+    }
 
     footer {
         position: absolute;
-        top: 910px;;
+        top: 950px;
         width:100%;
         text-align: center;
         color: rgba(10, 56, 113, 1);

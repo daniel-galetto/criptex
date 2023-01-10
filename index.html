@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +48,7 @@
 
             document.getElementById("msg").style.display = "block";
             document.getElementById("container").style.display = "none";
-            document.getElementById("boton-copiar").style.visibility = "visible";
+            document.getElementById("boton-copiar").style.display = "inline";
         }
 
         var botonCodificar = document.querySelector("#boton-codificar")
@@ -62,15 +62,14 @@
 
             document.getElementById("msg").style.display = "block";
             document.getElementById("container").style.display = "none";
-            document.getElementById("boton-copiar").style.visibility = "visible";
+            document.getElementById("boton-copiar").style.display = "inline";
         } 
 
         var botonDecodificar = document.querySelector("#boton-decodificar")
         botonDecodificar.onclick = decodificar
 
         function copiar(){
-           // alert("Disponible en version Premium")
-           
+            // alert("Disponible en version Premium")  
             var copiar = document.querySelector("#msg");
 	        copiar.select();
 	        document.execCommand("copy");
