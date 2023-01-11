@@ -26,9 +26,25 @@ function decodificar(){
 } 
 
 
-function copiar(){
+/* function copiar(){
     var copiar = document.querySelector("#msg");
     copiar.select();
     document.execCommand("copy");
-}
+} */
 
+function copiar(){
+    var content = document.getElementById('msg').innerHTML;
+
+    navigator.clipboard.writeText(content)
+        .then(() => {
+        document.getElementById("texto").value = content;
+        document.getElementById("msg").innerHTML = "";
+        document.getElementById("msg").style.display = "none";
+        document.getElementById("container").style.display = "block";
+        document.getElementById("boton-copiar").style.display = "none";
+    })
+        .catch(err => {
+        console.log('Something went wrong', err);
+    })
+ 
+}
