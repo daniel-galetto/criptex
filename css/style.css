@@ -42,6 +42,7 @@ body {
 .container {
     margin-top: 40%;
     font-size:12px;
+    
 }
 
 .rectangulo {
@@ -135,6 +136,7 @@ footer {
     width:100%;
     text-align: center;
     color: rgba(10, 56, 113, 1);
+    padding-bottom: 20px;
 }
 
 
@@ -212,15 +214,14 @@ footer {
 
     #msg {
         font-family: 'Inter', sans-serif;
-        font-size: 10px;
+        font-size: 24px;
         margin: 20px;
         text-align: left;
         color: #495057;
         resize: none;
         display:none;
-        width: 50px; 
-        height: 20px;
-        
+        width: 310px; 
+        height: 160px;
     }
     
     .frame {
@@ -243,13 +244,15 @@ footer {
         display: none;
     }
 
-    boton-copiar {
-        display: block;
+    .boton-copiar {
+        position: absolute;
+        width: 330px;
+        top: 230px;
     }
 
     footer {
         position: absolute;
-        top: 950px;
+        top: 1000px;
         width:100%;
         text-align: center;
         color: rgba(10, 56, 113, 1);
