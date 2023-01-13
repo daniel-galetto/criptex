@@ -50,3 +50,12 @@ function ocultar(){
     document.getElementById("container").style.display = "none";
     document.getElementById("boton-copiar").style.display = "inline";
 } 
+
+function permitidos(texto){    
+    var out = '';
+    var filtro = 'abcdefghijklmnñopqrstuvwxyz1234567890,!¡;.?¿ ';
+    for (var i=0; i<texto.length; i++)
+       if (filtro.indexOf(texto.charAt(i)) != -1) 
+	     out += texto.charAt(i);
+    return out;
+};
