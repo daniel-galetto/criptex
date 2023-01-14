@@ -39,7 +39,7 @@ function copiar(){
         document.getElementById("boton-copiar").style.display = "none";
     })
         .catch(err => {
-        console.log('Something went wrong', err);
+        console.log('Error al copiar', err);
     })
  
 }
@@ -51,11 +51,16 @@ function ocultar(){
     document.getElementById("boton-copiar").style.display = "inline";
 } 
 
-function permitidos(texto){    
-    var out = '';
+/* function permitidos(texto){    
+    var salida = '';
     var filtro = 'abcdefghijklmnñopqrstuvwxyz1234567890,!¡;.?¿ ';
     for (var i=0; i<texto.length; i++)
        if (filtro.indexOf(texto.charAt(i)) != -1) 
-	     out += texto.charAt(i);
-    return out;
-};
+	     salida += texto.charAt(i);
+    return salida;
+}; */
+
+function permitidos(){
+    var input = document.getElementById("texto").value;
+    return input.replace(/[^a-z0-9\s!¡¿?&%$*-+#()]/,'');
+}

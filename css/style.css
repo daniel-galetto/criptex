@@ -102,6 +102,7 @@ line-height: 40px;
     color: #D8DFE8;
     left: 200px;
     top: 500px;
+    cursor: pointer;
 }
 
 .boton-desencriptar{
@@ -114,6 +115,7 @@ line-height: 40px;
     color: #0A3871;
     left: 520px;
     top: 500px;
+    cursor: pointer;
 }
 
 .boton-copiar {
@@ -127,6 +129,7 @@ line-height: 40px;
     left: 10px;
     top: 480px;
     display: none;
+    cursor: pointer;
 }
 
 footer {
@@ -251,7 +254,7 @@ footer {
 
     footer {
         position: absolute;
-        top: 1000px;
+        top: 1010px;
         width:100%;
         text-align: center;
         color: rgba(10, 56, 113, 1);
